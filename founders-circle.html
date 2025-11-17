@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Founders Circle - Monumental</title>
+    <link href="https://fonts.googleapis.com/css2?family=Belgrano&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- ============================================ -->
+<!-- HERO SECTION: Founders Circle Introduction -->
+<!-- ============================================ -->
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Belgrano', serif;
+    }
+
+    .founders-hero-section {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+        overflow: hidden;
+    }
+
+    .founders-hero-video-bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        border: none;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .founders-hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.85) 100%);
+        z-index: 1;
+    }
+
+    .founders-hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding: 100px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .founders-hero-badge {
+        display: inline-block;
+        padding: 10px 30px;
+        background: rgba(218,165,32,0.2);
+        color: #daa520;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        border: 1px solid #daa520;
+        animation: fadeInDown 1s ease;
+    }
+
+    .founders-hero-title {
+        font-family: 'Libre Baskerville', serif;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        color: white;
+        margin-bottom: 30px;
+        font-weight: 400;
+        line-height: 1.4;
+        animation: fadeInUp 1s ease 0.2s both;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .founders-hero-subtitle {
+        font-size: clamp(2.5rem, 6vw, 5rem);
+        color: #daa520;
+        font-family: 'Libre Baskerville', serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -2px;
+        margin-bottom: 50px;
+        animation: fadeInUp 1s ease 0.4s both;
+    }
+
+    .founders-hero-stats {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        flex-wrap: wrap;
+        margin-top: 60px;
+        margin-bottom: 50px;
+        animation: fadeInUp 1s ease 0.6s both;
+    }
+
+    .founders-stat {
+        text-align: center;
+    }
+
+    .founders-stat-number {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 4rem;
+        color: #daa520;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 10px;
+    }
+
+    .founders-stat-label {
+        font-size: 1.1rem;
+        color: rgba(255,255,255,0.8);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .founders-hero-cta {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 18px 50px;
+        background: #daa520;
+        color: white;
+        text-decoration: none;
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+        transition: all 0.3s ease;
+        border: 2px solid #daa520;
+        border-radius: 40px;
+        font-weight: 600;
+        text-transform: uppercase;
+        animation: fadeInUp 1s ease 0.8s both;
+    }
+
+    .founders-hero-cta:hover {
+        background: transparent;
+        color: #daa520;
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(218, 165, 32, 0.3);
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .founders-hero-section {
+            min-height: 90vh;
+        }
+
+        .founders-hero-content {
+            padding: 80px 20px;
+        }
+
+        .founders-hero-stats {
+            gap: 40px;
+        }
+
+        .founders-stat-number {
+            font-size: 3rem;
+        }
+
+        .founders-hero-video-bg {
+            width: 300%;
+            height: 300%;
+        }
+    }
+</style>
+
+<section class="founders-hero-section">
+    <iframe class="founders-hero-video-bg"
+            src="https://player.vimeo.com/video/1136901979?autoplay=1&loop=1&muted=1&background=1#t=40s"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            loading="eager">
+    </iframe>
+    <div class="founders-hero-overlay"></div>
+    <div class="founders-hero-content">
+        <span class="founders-hero-badge">The Founders Circle</span>
+        <h1 class="founders-hero-title">A private circle for business owners who won't outsource responsibility – but won't do it all alone anymore.</h1>
+        <div class="founders-hero-stats">
+            <div class="founders-stat">
+                <div class="founders-stat-number">10</div>
+                <div class="founders-stat-label">Seats for 2026</div>
+            </div>
+            <div class="founders-stat">
+                <div class="founders-stat-number">4</div>
+                <div class="founders-stat-label">Places Left</div>
+            </div>
+        </div>
+        <a href="https://insight.monumental.global/founderscircle" class="founders-hero-cta">Register Interest</a>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- WHY THE FOUNDERS CIRCLE -->
+<!-- ============================================ -->
+<style>
+    .why-founders {
+        background: #000;
+        padding: 150px 0;
+    }
+
+    .why-founders-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 50px;
+    }
+
+    .why-founders-header {
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    .why-founders-title {
+        font-family: 'Libre Baskerville', serif;
+        font-size: clamp(2.5rem, 7vw, 6rem);
+        color: white;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -3px;
+        line-height: 1;
+    }
+
+    .why-founders-title span {
+        color: #daa520;
+    }
+
+    .why-founders-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+    }
+
+    .why-founders-col {
+        color: white;
+        font-size: 1.2rem;
+        line-height: 2;
+    }
+
+    .why-founders-col p {
+        margin-bottom: 30px;
+    }
+
+    .why-founders-col ul {
+        list-style: none;
+        padding: 0;
+        margin: 30px 0;
+    }
+
+    .why-founders-col li {
+        padding-left: 30px;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .why-founders-col li:before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: #daa520;
+        font-weight: bold;
+    }
+
+    .why-founders-standout {
+        font-size: 1.5rem;
+        color: #daa520;
+        font-weight: 600;
+        margin: 50px 0;
+        padding: 45px;
+        background: rgba(218, 165, 32, 0.06);
+        border-left: 6px solid #daa520;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 968px) {
+        .why-founders-content {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        .why-founders {
+            padding: 100px 0;
+        }
+        .why-founders-container {
+            padding: 0 30px;
+        }
+    }
+</style>
+
+<section class="why-founders">
+    <div class="why-founders-container">
+        <div class="why-founders-header">
+            <h2 class="why-founders-title">Why The <span>Founders Circle</span></h2>
+        </div>
+        <div class="why-founders-content">
+            <div class="why-founders-col">
+                <p>Owning a business is rich, demanding and, at times, brutal.</p>
+                <p>I may have no boss, but I still carry:</p>
+                <ul>
+                    <li>The weight of payroll, investors and people's livelihoods</li>
+                    <li>Decisions I can't fully share with my partner, team or board</li>
+                    <li>Questions about exit, succession, or what my next chapter actually is</li>
+                    <li>The sense that my identity and my business have quietly fused into one</li>
+                </ul>
+                <p>Friends and family care, but don't always get it.</p>
+                <p>Talking openly with co-founders or fellow directors rarely feels clean.</p>
+            </div>
+            <div class="why-founders-col">
+                <p class="why-founders-standout">I'm not broken. I'm a founder in transition.</p>
+                <p>The problem is trying to navigate that in isolation.</p>
+                <p>The Founders Circle is a place to work through the knotty challenges of business and life with other owners who've walked a similar path.</p>
+                <p class="why-founders-standout">Not a mastermind. Not a networking club.<br>And absolutely not a place for dick swinging.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- WHO IT'S FOR -->
+<!-- ============================================ -->
+<style>
+    .who-its-for-section {
+        position: relative;
+        padding: 140px 0;
+        background: #1D1D1D;
+        overflow: hidden;
+    }
+
+    .who-its-for-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .who-its-for-bg::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://monumental.global/wp-content/uploads/2025/11/MR-17-1-scaled-1.webp');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        opacity: 0.15;
+    }
+
+    .who-its-for-container {
+        position: relative;
+        z-index: 1;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    .who-its-for-title {
+        font-family: 'Libre Baskerville', serif;
+        font-size: clamp(2rem, 5vw, 4rem);
+        color: #daa520;
+        margin-bottom: 80px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -2px;
+        line-height: 1.1;
+        text-align: center;
+    }
+
+    .who-its-for-intro {
+        color: white;
+        font-size: 1.3rem;
+        line-height: 1.8;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .who-its-for-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 40px;
+        margin-bottom: 80px;
+    }
+
+    .who-its-for-card {
+        padding: 40px 35px;
+        background: rgba(0,0,0,0.6);
+        border-radius: 15px;
+        border-left: 4px solid #daa520;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+    }
+
+    .who-its-for-card:hover {
+        transform: translateX(10px);
+        background: rgba(0,0,0,0.8);
+        box-shadow: 0 10px 30px rgba(218, 165, 32, 0.2);
+    }
+
+    .who-its-for-card-icon {
+        font-size: 2.5rem;
+        color: #daa520;
+        margin-bottom: 20px;
+    }
+
+    .who-its-for-card-text {
+        color: white;
+        font-size: 1.15rem;
+        line-height: 1.7;
+    }
+
+    .who-its-for-subtitle {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.8rem;
+        color: #daa520;
+        margin: 60px 0 40px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .who-its-for-list {
+        list-style: none;
+        padding: 0;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .who-its-for-list li {
+        font-size: 1.2rem;
+        color: white;
+        padding: 25px 40px;
+        margin-bottom: 20px;
+        background: rgba(0,0,0,0.5);
+        border-left: 4px solid #daa520;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .who-its-for-list li:hover {
+        background: rgba(218, 165, 32, 0.1);
+        transform: translateX(10px);
+    }
+
+    .who-its-for-conclusion {
+        text-align: center;
+        font-size: 1.3rem;
+        color: white;
+        margin-top: 60px;
+        padding: 40px;
+        background: rgba(218, 165, 32, 0.08);
+        border-radius: 15px;
+        line-height: 1.8;
+    }
+
+    @media (max-width: 768px) {
+        .who-its-for-section {
+            padding: 100px 0;
+        }
+        .who-its-for-container {
+            padding: 0 20px;
+        }
+    }
+</style>
+
+<section class="who-its-for-section">
+    <div class="who-its-for-bg"></div>
+    <div class="who-its-for-container">
+        <h2 class="who-its-for-title">Who It's For</h2>
+        <p class="who-its-for-intro">Every man in the room:</p>
+
+        <div class="who-its-for-grid">
+            <div class="who-its-for-card">
+                <div class="who-its-for-card-icon"><i class="fas fa-building"></i></div>
+                <p class="who-its-for-card-text">Owns or has founded a business with meaningful scale (typically £1m+ revenue)</p>
+            </div>
+            <div class="who-its-for-card">
+                <div class="who-its-for-card-icon"><i class="fas fa-chess-king"></i></div>
+                <p class="who-its-for-card-text">Has led through risk, complexity and pressure</p>
+            </div>
+            <div class="who-its-for-card">
+                <div class="who-its-for-card-icon"><i class="fas fa-landmark"></i></div>
+                <p class="who-its-for-card-text">Is usually 40+ and asking harder questions about legacy, family, health and direction</p>
+            </div>
+            <div class="who-its-for-card">
+                <div class="who-its-for-card-icon"><i class="fas fa-handshake"></i></div>
+                <p class="who-its-for-card-text">Wants experienced peers who will tell the truth, not an audience to impress</p>
+            </div>
+        </div>
+
+        <h3 class="who-its-for-subtitle">Members may be:</h3>
+
+        <ul class="who-its-for-list">
+            <li>Deep in building and scaling</li>
+            <li>Preparing or negotiating an exit</li>
+            <li>Post-exit and working out who they are without "the business"</li>
+            <li>Exploring their next chapter – NED roles, new ventures, or a different pace of life</li>
+        </ul>
+
+        <p class="who-its-for-conclusion">What we share is simple: we know what it is to be ultimately responsible.</p>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- HOW IT WORKS -->
+<!-- ============================================ -->
+<style>
+    .how-it-works {
+        background: #000;
+        padding: 150px 0;
+    }
+
+    .how-it-works-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 50px;
+    }
+
+    .how-it-works-title {
+        font-family: 'Libre Baskerville', serif;
+        font-size: clamp(2.5rem, 7vw, 6rem);
+        color: #daa520;
+        text-align: center;
+        margin-bottom: 40px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -3px;
+    }
+
+    .how-it-works-intro {
+        text-align: center;
+        font-size: 1.4rem;
+        color: white;
+        margin-bottom: 100px;
+        line-height: 1.8;
+    }
+
+    .how-it-works-intro strong {
+        color: #daa520;
+    }
+
+    .how-it-works-sections {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        margin-bottom: 80px;
+    }
+
+    .how-section {
+        background: rgba(29, 29, 29, 0.5);
+        padding: 60px 50px;
+        border-radius: 20px;
+        border: 2px solid rgba(218, 165, 32, 0.2);
+    }
+
+    .how-section-icon {
+        font-size: 3.5rem;
+        color: #daa520;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .how-section-title {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 2.2rem;
+        color: #daa520;
+        margin-bottom: 35px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .how-section-content {
+        color: white;
+        font-size: 1.15rem;
+        line-height: 1.9;
+    }
+
+    .how-section-content p {
+        margin-bottom: 25px;
+    }
+
+    .how-section-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 25px 0;
+    }
+
+    .how-section-content li {
+        padding-left: 30px;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .how-section-content li:before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: #daa520;
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+
+    .how-it-works-highlight {
+        font-size: 1.4rem;
+        color: #daa520;
+        font-weight: 600;
+        text-align: center;
+        margin: 60px 0;
+        padding: 50px;
+        background: rgba(218, 165, 32, 0.08);
+        border-radius: 20px;
+        border: 2px solid rgba(218, 165, 32, 0.3);
+        line-height: 1.7;
+    }
+
+    @media (max-width: 968px) {
+        .how-it-works-sections {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+        .how-it-works {
+            padding: 100px 0;
+        }
+        .how-it-works-container {
+            padding: 0 30px;
+        }
+        .how-section {
+            padding: 40px 30px;
+        }
+    }
+</style>
+
+<section class="how-it-works">
+    <div class="how-it-works-container">
+        <h2 class="how-it-works-title">How It Works</h2>
+        <p class="how-it-works-intro">
+            <strong>Closed group. 10 men max. Same faces, every time.</strong><br>
+            For 2026, there are 10 seats only – and 4 are still available.
+        </p>
+
+        <div class="how-it-works-sections">
+            <div class="how-section">
+                <div class="how-section-icon"><i class="fas fa-calendar-alt"></i></div>
+                <h3 class="how-section-title">In Person</h3>
+                <div class="how-section-content">
+                    <p><strong>5 in-person gatherings per year</strong></p>
+                    <ul>
+                        <li>4 × full-day sessions</li>
+                        <li>1 × overnight in a beautiful setting</li>
+                    </ul>
+                    <p><strong>Days typically include:</strong></p>
+                    <ul>
+                        <li>Activating breathwork – arrive properly, not just turn up</li>
+                        <li>Men's circle – confidential space for what's really going on</li>
+                        <li>Nutritious shared food – conversation that actually goes somewhere</li>
+                        <li>Walk in nature – space to think without a screen</li>
+                        <li>Strategy & legacy work – getting clear on what I'm building now, and why</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="how-section">
+                <div class="how-section-icon"><i class="fas fa-comments"></i></div>
+                <h3 class="how-section-title">Between Meetings</h3>
+                <div class="how-section-content">
+                    <ul>
+                        <li>Group calls in the "off" months to integrate, reset and stay accountable</li>
+                        <li>A clear place to bring key decisions and challenges, rather than carrying them alone</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <p class="how-it-works-highlight">
+            Over time, The Founders Circle becomes a blend of:<br>
+            advisory board, reality check and lifeline.
+        </p>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- ACCESS TO THE MONUMENTAL NETWORK -->
+<!-- ============================================ -->
+<style>
+    .network-access {
+        position: relative;
+        padding: 140px 0;
+        background: #1D1D1D;
+        overflow: hidden;
+    }
+
+    .network-access-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .network-access-bg::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://monumental.global/wp-content/uploads/2025/11/DJI_0514-scaled-1.webp');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        opacity: 0.2;
+    }
+
+    .network-access-container {
+        position: relative;
+        z-index: 1;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    .network-access-title {
+        font-family: 'Libre Baskerville', serif;
+        font-size: clamp(2rem, 5vw, 4rem);
+        color: #daa520;
+        margin-bottom: 60px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -2px;
+        text-align: center;
+    }
+
+    .network-access-intro {
+        font-size: 1.3rem;
+        color: white;
+        text-align: center;
+        margin-bottom: 60px;
+        line-height: 1.8;
+    }
+
+    .network-access-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+
+    .network-access-item {
+        text-align: center;
+        padding: 40px 30px;
+        background: rgba(0,0,0,0.6);
+        border-radius: 15px;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+    }
+
+    .network-access-item:hover {
+        transform: translateY(-10px);
+        background: rgba(0,0,0,0.8);
+        box-shadow: 0 20px 40px rgba(218, 165, 32, 0.2);
+    }
+
+    .network-access-item-icon {
+        font-size: 3rem;
+        color: #daa520;
+        margin-bottom: 25px;
+    }
+
+    .network-access-item-text {
+        font-size: 1.15rem;
+        color: white;
+        line-height: 1.6;
+    }
+
+    .network-access-conclusion {
+        text-align: center;
+        font-size: 1.35rem;
+        color: white;
+        padding: 50px;
+        background: rgba(218, 165, 32, 0.08);
+        border-radius: 20px;
+        border: 2px solid rgba(218, 165, 32, 0.3);
+        line-height: 1.8;
+    }
+
+    .network-access-conclusion strong {
+        color: #daa520;
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    @media (max-width: 768px) {
+        .network-access {
+            padding: 100px 0;
+        }
+        .network-access-container {
+            padding: 0 20px;
+        }
+    }
+</style>
+
+<section class="network-access">
+    <div class="network-access-bg"></div>
+    <div class="network-access-container">
+        <h2 class="network-access-title">Plus: Access to The Monumental Network</h2>
+        <p class="network-access-intro">Membership of The Founders Circle includes full access to The Monumental Network:</p>
+
+        <div class="network-access-grid">
+            <div class="network-access-item">
+                <div class="network-access-item-icon"><i class="fas fa-video"></i></div>
+                <p class="network-access-item-text">Live group sessions</p>
+            </div>
+            <div class="network-access-item">
+                <div class="network-access-item-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                <p class="network-access-item-text">Workshops and masterclasses</p>
+            </div>
+            <div class="network-access-item">
+                <div class="network-access-item-icon"><i class="fas fa-rocket"></i></div>
+                <p class="network-access-item-text">Momentum calls</p>
+            </div>
+            <div class="network-access-item">
+                <div class="network-access-item-icon"><i class="fas fa-users"></i></div>
+                <p class="network-access-item-text">Private platform and wider community of senior men in leadership</p>
+            </div>
+        </div>
+
+        <div class="network-access-conclusion">
+            <strong>The Founders Circle is my intimate, owner-only room.</strong>
+            The Monumental Network is the wider ecosystem that supports my growth in between.
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- A CIRCLE THAT CHOOSES ITS OWN -->
+<!-- ============================================ -->
+<style>
+    .circle-entry {
+        background: #000;
+        padding: 150px 0;
+    }
+
+    .circle-entry-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 50px;
+    }
+
+    .circle-entry-title {
+        font-family: 'Libre Baskerville', serif;
+        font-size: clamp(2.5rem, 6vw, 5rem);
+        color: #daa520;
+        text-align: center;
+        margin-bottom: 80px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -2px;
+    }
+
+    .circle-entry-intro {
+        font-size: 1.3rem;
+        color: white;
+        text-align: center;
+        margin-bottom: 80px;
+        line-height: 1.8;
+    }
+
+    .circle-entry-steps {
+        max-width: 900px;
+        margin: 0 auto 80px;
+    }
+
+    .entry-step {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 40px;
+        padding: 35px;
+        background: rgba(29, 29, 29, 0.5);
+        border-radius: 15px;
+        border-left: 4px solid #daa520;
+        transition: all 0.3s ease;
+    }
+
+    .entry-step:hover {
+        background: rgba(29, 29, 29, 0.8);
+        transform: translateX(10px);
+    }
+
+    .entry-step-number {
+        flex-shrink: 0;
+        width: 60px;
+        height: 60px;
+        background: #daa520;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: white;
+        margin-right: 30px;
+    }
+
+    .entry-step-text {
+        flex: 1;
+        font-size: 1.2rem;
+        color: white;
+        padding-top: 15px;
+    }
+
+    .circle-entry-conclusion {
+        text-align: center;
+        font-size: 1.35rem;
+        color: white;
+        padding: 50px;
+        background: rgba(218, 165, 32, 0.08);
+        border-radius: 20px;
+        border: 2px solid rgba(218, 165, 32, 0.3);
+        line-height: 1.8;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .circle-entry-conclusion strong {
+        color: #daa520;
+    }
+
+    @media (max-width: 768px) {
+        .circle-entry {
+            padding: 100px 0;
+        }
+        .circle-entry-container {
+            padding: 0 30px;
+        }
+        .entry-step {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .entry-step-number {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+        .entry-step-text {
+            padding-top: 0;
+        }
+    }
+</style>
+
+<section class="circle-entry">
+    <div class="circle-entry-container">
+        <h2 class="circle-entry-title">A Circle That Chooses Its Own</h2>
+        <p class="circle-entry-intro">Entry isn't automatic.</p>
+
+        <div class="circle-entry-steps">
+            <div class="entry-step">
+                <div class="entry-step-number">1</div>
+                <div class="entry-step-text">I register interest</div>
+            </div>
+            <div class="entry-step">
+                <div class="entry-step-number">2</div>
+                <div class="entry-step-text">I have a confidential conversation with Pete</div>
+            </div>
+            <div class="entry-step">
+                <div class="entry-step-number">3</div>
+                <div class="entry-step-text">If there's a mutual fit, my name is brought to the group</div>
+            </div>
+            <div class="entry-step">
+                <div class="entry-step-number">4</div>
+                <div class="entry-step-text">The existing Founders Circle has overall say on who joins</div>
+            </div>
+        </div>
+
+        <div class="circle-entry-conclusion">
+            <strong>The quality of the circle depends on the quality of the men in it.</strong><br>
+            The current members protect that – for themselves, and for anyone new coming in.<br><br>
+            If I am invited, I'll know I've been chosen by the men I'll be sitting with, not just by a sales page.
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- AM I ONE OF THE FOUR? -->
+<!-- ============================================ -->
+<style>
+    .am-i-one {
+        position: relative;
+        padding: 140px 0;
+        background: #1D1D1D;
+        overflow: hidden;
+    }
+
+    .am-i-one-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .am-i-one-bg::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://monumental.global/wp-content/uploads/2025/11/MR-12-1-scaled-1.webp');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        opacity: 0.15;
+    }
+
+    .am-i-one-container {
+        position: relative;
+        z-index: 1;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    .am-i-one-title {
+        font-family: 'Libre Baskerville', serif;
+        font-size: clamp(2.5rem, 6vw, 5rem);
+        color: #daa520;
+        margin-bottom: 60px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -2px;
+        text-align: center;
+    }
+
+    .am-i-one-intro {
+        font-size: 1.3rem;
+        color: white;
+        text-align: center;
+        margin-bottom: 80px;
+        line-height: 1.8;
+    }
+
+    .am-i-one-questions {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .am-i-question {
+        font-size: 1.25rem;
+        color: white;
+        padding: 35px 45px;
+        margin-bottom: 25px;
+        background: rgba(0,0,0,0.6);
+        border-left: 5px solid #daa520;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+        line-height: 1.7;
+    }
+
+    .am-i-question:hover {
+        background: rgba(218, 165, 32, 0.1);
+        transform: translateX(15px);
+        border-left-width: 8px;
+    }
+
+    .am-i-one-conclusion {
+        text-align: center;
+        font-size: 1.35rem;
+        color: white;
+        margin-top: 80px;
+        padding: 50px;
+        background: rgba(218, 165, 32, 0.08);
+        border-radius: 20px;
+        border: 2px solid rgba(218, 165, 32, 0.3);
+        line-height: 1.8;
+    }
+
+    .am-i-one-conclusion strong {
+        color: #daa520;
+        display: block;
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+        .am-i-one {
+            padding: 100px 0;
+        }
+        .am-i-one-container {
+            padding: 0 20px;
+        }
+        .am-i-question {
+            font-size: 1.1rem;
+            padding: 28px 30px;
+        }
+    }
+</style>
+
+<section class="am-i-one">
+    <div class="am-i-one-bg"></div>
+    <div class="am-i-one-container">
+        <h2 class="am-i-one-title">Am I One of the Four?</h2>
+        <p class="am-i-one-intro">A few sharper questions to sit with:</p>
+
+        <div class="am-i-one-questions">
+            <div class="am-i-question">
+                Am I a business owner who is used to being the most responsible man in the room – and the least supported?
+            </div>
+            <div class="am-i-question">
+                Do I secretly know that my current way of operating is unsustainable, even if it looks impressive from the outside?
+            </div>
+            <div class="am-i-question">
+                Have I run out of people I can speak to honestly about the business, my family, my health, and what this is all costing me?
+            </div>
+            <div class="am-i-question">
+                Am I willing to be challenged, held to account, and seen clearly by other serious men – not just admired for my CV?
+            </div>
+            <div class="am-i-question">
+                If the existing group had the final say, would I back myself to be someone they'd want beside them?
+            </div>
+        </div>
+
+        <div class="am-i-one-conclusion">
+            <strong>If those land uncomfortably but truthfully, I'm likely one of the four remaining seats.</strong>
+            Register Interest and we'll have a confidential conversation. If it's right, my name goes to the group. They'll decide if I am one of the ten for 2026.
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- FINAL CTA -->
+<!-- ============================================ -->
+<style>
+    .founders-final-cta {
+        position: relative;
+        padding: 200px 0;
+        overflow: hidden;
+    }
+
+    .founders-cta-bg {
+        position: absolute;
+        inset: 0;
+        background-image: url('https://monumental.global/wp-content/uploads/2025/11/MR-98-scaled-2.webp');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .founders-cta-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(218, 165, 32, 0.92) 0%, rgba(184, 148, 28, 0.95) 100%);
+    }
+
+    .founders-cta-content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    .founders-cta-badge {
+        display: inline-block;
+        padding: 12px 35px;
+        background: rgba(255,255,255,0.2);
+        color: white;
+        border-radius: 40px;
+        font-size: 0.85rem;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        font-weight: 600;
+    }
+
+    .founders-cta-title {
+        font-family: 'Libre Baskerville', serif;
+        font-size: clamp(2.5rem, 6vw, 5.5rem);
+        color: white;
+        margin-bottom: 35px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -2px;
+    }
+
+    .founders-cta-text {
+        font-size: 1.5rem;
+        color: rgba(255,255,255,0.97);
+        margin-bottom: 50px;
+        line-height: 1.7;
+    }
+
+    .founders-cta-stats {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        margin-bottom: 65px;
+        flex-wrap: wrap;
+    }
+
+    .founders-cta-stat {
+        text-align: center;
+    }
+
+    .founders-cta-stat-number {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 4.5rem;
+        color: white;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 10px;
+    }
+
+    .founders-cta-stat-label {
+        font-size: 1.2rem;
+        color: rgba(255,255,255,0.9);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .founders-cta-btn {
+        display: inline-block;
+        padding: 22px 65px;
+        background: white;
+        color: #daa520;
+        text-decoration: none;
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.15rem;
+        font-weight: 700;
+        transition: all 0.4s ease;
+        border-radius: 45px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .founders-cta-btn:hover {
+        transform: translateY(-8px) scale(1.05);
+        box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+    }
+
+    @media (max-width: 768px) {
+        .founders-final-cta {
+            padding: 120px 0;
+        }
+        .founders-cta-stats {
+            gap: 40px;
+        }
+        .founders-cta-stat-number {
+            font-size: 3.5rem;
+        }
+    }
+</style>
+
+<section class="founders-final-cta">
+    <div class="founders-cta-bg"></div>
+    <div class="founders-cta-overlay"></div>
+    <div class="founders-cta-content">
+        <div class="founders-cta-badge">The Founders Circle 2026</div>
+        <h2 class="founders-cta-title">Secure Your Seat</h2>
+        <p class="founders-cta-text">Join a circle of business owners navigating the complexity of building, leading, and living with clarity and support.</p>
+
+        <div class="founders-cta-stats">
+            <div class="founders-cta-stat">
+                <div class="founders-cta-stat-number">10</div>
+                <div class="founders-cta-stat-label">Total Seats</div>
+            </div>
+            <div class="founders-cta-stat">
+                <div class="founders-cta-stat-number">4</div>
+                <div class="founders-cta-stat-label">Places Remaining</div>
+            </div>
+        </div>
+
+        <a href="https://insight.monumental.global/founderscircle" class="founders-cta-btn">Register Interest</a>
+    </div>
+</section>
+
+</body>
+</html>
