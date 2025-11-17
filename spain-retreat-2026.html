@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spain 2026 - Monumental Men's Retreat | April 15-19</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://monumental.global/wp-content/uploads/2025/11/placeholderheroimage.webp" as="image">
+    <link rel="preconnect" href="https://player.vimeo.com">
+    <link rel="preconnect" href="https://i.vimeocdn.com">
+    <link rel="dns-prefetch" href="https://monumental.global">
+    <link rel="dns-prefetch" href="https://f.vimeocdn.com">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Belgrano&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<style>
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Belgrano', serif;
+    background: #000;
+    color: #fff;
+}
+
+.e-con {
+    --padding-inline-end: none !important;
+}
+
+.e-con > .e-con-inner {
+    max-width: none;
+    padding: 0 !important;
+}
+
+/* ============================================
+   BLOCK 1: HERO SECTION
+   ============================================ */
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000 url('https://monumental.global/wp-content/uploads/2025/11/placeholderheroimage.webp') center center / cover no-repeat;
+}
+
+.hero-section iframe {
+    position: absolute !important;
+    top: -25% !important;
+    left: -25% !important;
+    width: 150% !important;
+    height: 150% !important;
+    border: none !important;
+    pointer-events: none !important;
+    max-width: none !important;
+    max-height: none !important;
+    loading: eager;
+    importance: high;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.hero-section iframe.loaded {
+    opacity: 1;
+}
+
+/* Responsive iframe sizing */
+@media screen and (max-width: 1050px) {
+    .hero-section iframe {
+        top: -50% !important;
+        left: -50% !important;
+        width: 200% !important;
+        height: 200% !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-section iframe {
+        top: -100% !important;
+        left: -100% !important;
+        width: 300% !important;
+        height: 300% !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-section iframe {
+        top: -150% !important;
+        left: -150% !important;
+        width: 400% !important;
+        height: 400% !important;
+    }
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+    z-index: 1;
+}
+
+.hero-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(218,165,32,.1) 35px, rgba(218,165,32,.1) 70px),
+        repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(218,165,32,.05) 35px, rgba(218,165,32,.05) 70px);
+    z-index: 1;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+    padding: 20px;
+}
+
+.hero-icon {
+    width: 160px;
+    height: auto;
+    padding-bottom: 2rem;
+    animation: fadeInDown 1s ease;
+}
+
+.hero-brand {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.2rem;
+    color: #daa520;
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+    animation: fadeInUp 1s ease 0.2s both;
+    text-transform: uppercase;
+}
+
+.hero-main-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(2rem, 4vw, 4.5rem);
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    animation: fadeInUp 1s ease 0.4s both;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-services {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #ffffff;
+    margin-bottom: 35px;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease 0.6s both;
+}
+
+.hero-cta {
+    display: inline-block;
+    padding: 16px 50px;
+    background: #daa520;
+    color: white;
+    text-decoration: none;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid #daa520;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    border-radius: 50px;
+    font-weight: 600;
+    animation: fadeInUp 1s ease 0.8s both;
+}
+
+.hero-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.hero-cta:hover {
+    color: #daa520;
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(218, 165, 32, 0.3);
+}
+
+.hero-cta:hover::before {
+    left: 0;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    z-index: 2;
+}
+
+.scroll-indicator span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 3px solid #daa520;
+    border-right: 3px solid #daa520;
+    transform: rotate(45deg);
+    margin: -10px;
+    opacity: 0.6;
+    animation: fadeInUp 1s ease 1s both;
+}
+
+/* ============================================
+   BLOCK 2: VIDEO WITH HEADING SECTION
+   ============================================ */
+
+.video-heading-section {
+    padding: 100px 0;
+    background: #1D1D1D;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-heading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(29, 29, 29, 0.85) 100%);
+    z-index: 0;
+}
+
+.containerIntro {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.video-heading-content {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.video-heading-badge {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #daa520;
+    color: white;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: 600;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(218, 165, 32, 0.7);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(218, 165, 32, 0);
+    }
+}
+
+.video-heading-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: white;
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 1.1;
+}
+
+.video-heading-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ffffff;
+    margin-bottom: 35px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-heading-container {
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto 40px;
+    position: relative;
+    background: #1D1D1D;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.video-heading-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-heading-cta {
+    display: inline-block;
+    padding: 16px 50px;
+    background: #daa520;
+    color: white;
+    text-decoration: none;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid #daa520;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.video-heading-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.video-heading-cta:hover {
+    color: #daa520;
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(218, 165, 32, 0.3);
+}
+
+.video-heading-cta:hover::before {
+    left: 0;
+}
+
+/* ============================================
+   BLOCK 3: QUOTE SECTION WITH VIDEO BG
+   ============================================ */
+
+.quote-video-section {
+    position: relative;
+    padding: 150px 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+}
+
+.quote-video-bg {
+    position: absolute;
+    top: -25%;
+    left: -25%;
+    width: 150%;
+    height: 150%;
+    border: none;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@media screen and (max-width: 1050px) {
+    .quote-video-bg {
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .quote-video-bg {
+        top: -100%;
+        left: -100%;
+        width: 300%;
+        height: 300%;
+    }
+}
+
+.quote-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 1;
+}
+
+.quote-content-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.quote-text {
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: white;
+    line-height: 1.4;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0 40px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+.quote-author {
+    font-size: 1.3rem;
+    color: #daa520;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+/* ============================================
+   BLOCK 4 & 5: VIDEO + TEXT SECTIONS
+   ============================================ */
+
+.video-text-section {
+    padding: 120px 0;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-text-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.video-text-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://monumental.global/wp-content/uploads/2025/11/DJI_0514-scaled-2.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.video-text-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.video-text-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.video-text-grid.reverse {
+    direction: rtl;
+}
+
+.video-text-grid.reverse > * {
+    direction: ltr;
+}
+
+.video-text-video-container {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+}
+
+.video-text-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-text-content h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #daa520;
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 1.1;
+}
+
+.video-text-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+}
+
+/* ============================================
+   BLOCK 6: FULL WIDTH VIDEO BANNER
+   ============================================ */
+
+.full-video-banner {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    min-height: 400px;
+    overflow: hidden;
+    background: #000;
+}
+
+.full-video-banner iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 177.77vh;
+    height: 100%;
+    min-width: 100%;
+    min-height: 56.25vw;
+    transform: translate(-50%, -50%);
+    border: none;
+    pointer-events: none;
+}
+
+/* ============================================
+   BLOCK 7: IMAGE MONTAGE
+   ============================================ */
+
+.image-montage-section {
+    padding: 0;
+    background: #000;
+}
+
+.montage-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 250px;
+    gap: 10px;
+    padding: 10px;
+}
+
+.montage-item {
+    overflow: hidden;
+    position: relative;
+}
+
+.montage-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.montage-item:hover img {
+    transform: scale(1.1);
+}
+
+.montage-item:nth-child(1) { grid-column: span 4; grid-row: span 2; }
+.montage-item:nth-child(2) { grid-column: span 4; grid-row: span 1; }
+.montage-item:nth-child(3) { grid-column: span 4; grid-row: span 1; }
+.montage-item:nth-child(4) { grid-column: span 4; grid-row: span 1; }
+.montage-item:nth-child(5) { grid-column: span 4; grid-row: span 1; }
+.montage-item:nth-child(6) { grid-column: span 3; grid-row: span 2; }
+.montage-item:nth-child(7) { grid-column: span 3; grid-row: span 1; }
+.montage-item:nth-child(8) { grid-column: span 3; grid-row: span 1; }
+.montage-item:nth-child(9) { grid-column: span 3; grid-row: span 2; }
+.montage-item:nth-child(10) { grid-column: span 6; grid-row: span 1; }
+
+/* ============================================
+   BLOCK 8: 9 FEATURES SECTION
+   ============================================ */
+
+.features-section {
+    padding: 120px 0;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.features-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.features-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://monumental.global/wp-content/uploads/2025/11/DJI_0514-scaled-2.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.features-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.features-header {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.features-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 1.1;
+}
+
+.features-title span {
+    color: #daa520;
+}
+
+.features-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #ffffff;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.feature-card {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(218, 165, 32, 0.2);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 80px rgba(218, 165, 32, 0.3);
+    border-color: rgba(218, 165, 32, 0.5);
+}
+
+.feature-video {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+
+.feature-video iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 177.77vh;
+    height: 100%;
+    min-width: 100%;
+    min-height: 56.25vw;
+    transform: translate(-50%, -50%);
+    border: none;
+    pointer-events: none;
+}
+
+.feature-content {
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.feature-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.5rem;
+    color: #daa520;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+.feature-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* ============================================
+   BLOCK 9: FINAL CTA SECTION
+   ============================================ */
+
+.final-cta-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #daa520 0%, #b8941c 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px),
+        repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(0,0,0,.05) 35px, rgba(0,0,0,.05) 70px);
+    animation: patternMove 20s linear infinite;
+    z-index: 1;
+}
+
+@keyframes patternMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(70px, 70px); }
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-badge {
+    display: inline-block;
+    padding: 10px 25px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: 600;
+    animation: fadeInDown 1s ease;
+}
+
+.cta-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: white;
+    margin-bottom: 25px;
+    font-weight: 700;
+    animation: fadeInUp 1s ease 0.2s both;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.cta-subtitle {
+    font-size: 1.3rem;
+    color: rgba(255,255,255,0.95);
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+    animation: fadeInUp 1s ease 0.4s both;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease 0.6s both;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 18px 50px;
+    background: white;
+    color: #daa520;
+    text-decoration: none;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.05rem;
+    font-weight: bold;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    border-radius: 35px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(218, 165, 32, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.cta-button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .montage-grid {
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: 200px;
+    }
+
+    .montage-item:nth-child(1) { grid-column: span 3; grid-row: span 2; }
+    .montage-item:nth-child(2), .montage-item:nth-child(3) { grid-column: span 3; grid-row: span 1; }
+    .montage-item:nth-child(4), .montage-item:nth-child(5) { grid-column: span 3; grid-row: span 1; }
+    .montage-item:nth-child(6) { grid-column: span 2; grid-row: span 2; }
+    .montage-item:nth-child(7), .montage-item:nth-child(8) { grid-column: span 2; grid-row: span 1; }
+    .montage-item:nth-child(9) { grid-column: span 2; grid-row: span 2; }
+    .montage-item:nth-child(10) { grid-column: span 3; grid-row: span 1; }
+}
+
+@media (max-width: 992px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .video-text-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .video-text-grid.reverse {
+        direction: ltr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-icon {
+        width: 130px;
+    }
+
+    .hero-brand {
+        font-size: 1rem;
+    }
+
+    .hero-main-title {
+        font-size: 2rem;
+    }
+
+    .hero-services {
+        font-size: 1rem;
+    }
+
+    .hero-cta, .video-heading-cta {
+        padding: 14px 40px;
+        font-size: 0.9rem;
+    }
+
+    .video-heading-section, .video-text-section {
+        padding: 80px 0;
+    }
+
+    .video-heading-title {
+        font-size: 2.5rem;
+    }
+
+    .quote-video-section {
+        padding: 100px 20px;
+        min-height: 400px;
+    }
+
+    .quote-text {
+        font-size: 1.8rem;
+        padding: 0 20px;
+    }
+
+    .montage-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 150px;
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .montage-item:nth-child(1), .montage-item:nth-child(6), .montage-item:nth-child(9) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .montage-item:nth-child(2), .montage-item:nth-child(3), .montage-item:nth-child(4),
+    .montage-item:nth-child(5), .montage-item:nth-child(7), .montage-item:nth-child(8) {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .montage-item:nth-child(10) {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .features-section {
+        padding: 80px 0;
+    }
+
+    .final-cta-section {
+        padding: 80px 0;
+    }
+
+    .cta-title {
+        font-size: 2.5rem;
+    }
+
+    .cta-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-button {
+        width: 100%;
+        max-width: 300px;
+        padding: 16px 40px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-cta, .video-heading-cta {
+        padding: 12px 30px;
+        font-size: 0.85rem;
+    }
+
+    .video-heading-section {
+        padding: 60px 0;
+    }
+
+    .video-heading-title {
+        font-size: 2rem;
+    }
+
+    .quote-video-section {
+        padding: 80px 15px;
+    }
+
+    .quote-text {
+        font-size: 1.5rem;
+    }
+
+    .montage-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 120px;
+        gap: 5px;
+        padding: 5px;
+    }
+
+    .montage-item {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+    }
+
+    .cta-title {
+        font-size: 2rem;
+    }
+
+    .cta-button {
+        padding: 14px 30px;
+        font-size: 0.85rem;
+    }
+}
+</style>
+
+<body>
+
+<!-- BLOCK 1: HERO SECTION -->
+<section class="hero-section">
+    <iframe
+        class="hero-video-bg"
+        id="heroVideo"
+        src="https://player.vimeo.com/video/1133793461?autoplay=1&loop=1&muted=1&background=1&playsinline=1"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        loading="eager"
+        fetchpriority="high">
+    </iframe>
+    <div class="hero-overlay"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+        <img src="https://monumental.global/wp-content/uploads/2024/02/Monumental-02.png" alt="Monumental" class="hero-icon">
+        <p class="hero-brand">SPAIN</p>
+        <h1 class="hero-main-title">A Journey of Self-Discovery</h1>
+        <p class="hero-services">An Exclusive Men's Retreat in Spain • April 15-19, 2026</p>
+        <a href="https://insight.monumental.global/spainretreat2026" class="hero-cta">Book Now</a>
+    </div>
+    <div class="scroll-indicator">
+        <span></span>
+    </div>
+</section>
+
+<!-- BLOCK 2: VIDEO WITH HEADING SECTION -->
+<section class="video-heading-section">
+    <div class="video-heading-overlay"></div>
+    <div class="containerIntro">
+        <div class="video-heading-content">
+            <span class="video-heading-badge">April 15-19, 2026</span>
+            <h2 class="video-heading-title">Transform Beneath The Spanish Sun</h2>
+            <p class="video-heading-subtitle">
+                An intimate gathering of men seeking deeper purpose, authentic connection, and lasting transformation in the heart of Spain.
+            </p>
+        </div>
+
+        <div class="video-heading-container">
+            <iframe
+                src="https://player.vimeo.com/video/1133793461?autoplay=1&loop=1&muted=1&controls=0&background=1#t=20s"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="https://insight.monumental.global/spainretreat2026" class="video-heading-cta">Book Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- BLOCK 3: QUOTE SECTION WITH VIDEO BACKGROUND -->
+<section class="quote-video-section">
+    <iframe
+        class="quote-video-bg"
+        src="https://player.vimeo.com/video/1134739087?autoplay=1&loop=1&muted=1&background=1&playsinline=1"
+        frameborder="0"
+        allow="autoplay; fullscreen">
+    </iframe>
+    <div class="quote-video-overlay"></div>
+    <div class="quote-content-container">
+        <p class="quote-text">
+            "I've become a more confident man, a steadier father and a stronger leader thanks to Monumental."
+        </p>
+        <p class="quote-author">– Andrew</p>
+    </div>
+</section>
+
+<!-- BLOCK 4: VIDEO + TEXT SECTION 1 -->
+<section class="video-text-section">
+    <div class="video-text-bg"></div>
+    <div class="container">
+        <div class="video-text-grid">
+            <div class="video-text-video-container">
+                <iframe
+                    src="https://player.vimeo.com/video/1133793461?autoplay=1&loop=1&muted=1&background=1#t=45s"
+                    frameborder="0"
+                    allow="autoplay; fullscreen">
+                </iframe>
+            </div>
+            <div class="video-text-content">
+                <h2>Reclaim Your Power. Redefine Your Path.</h2>
+                <p>
+                    This is a rare opportunity to step away from the noise and into the presence of men who understand the weight of leadership, the complexity of purpose, and the courage it takes to transform.
+                </p>
+                <p>
+                    Over four transformative days in Spain, you'll be guided through an immersive experience designed to help you reconnect with your deepest truths, shed what no longer serves you, and step into the man you're meant to become.
+                </p>
+                <p>
+                    This isn't a conference. This isn't networking. This is deep, intentional work in an intimate setting with men committed to growth, authenticity, and legacy.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BLOCK 5: VIDEO + TEXT SECTION 2 -->
+<section class="video-text-section">
+    <div class="video-text-bg"></div>
+    <div class="container">
+        <div class="video-text-grid reverse">
+            <div class="video-text-content">
+                <h2>Led by Battle-Tested Guides</h2>
+                <p>
+                    The Monumental team has guided hundreds of men through profound transformation over the years. Our facilitators understand the unique pressures of modern leadership and the internal battles that come with it.
+                </p>
+                <p>
+                    This retreat is built on years of deep work with men navigating life's pivotal transitions - career shifts, relationship challenges, identity evolution, and the pursuit of something greater than themselves.
+                </p>
+                <p>
+                    In Spain, you'll be held by experienced guides who've walked their own paths of transformation and now dedicate themselves to helping other men do the same. This is about creating lasting change that echoes through your relationships, your work, and your legacy.
+                </p>
+            </div>
+            <div class="video-text-video-container">
+                <iframe
+                    src="https://player.vimeo.com/video/1133793461?autoplay=1&loop=1&muted=1&background=1#t=90s"
+                    frameborder="0"
+                    allow="autoplay; fullscreen">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BLOCK 6: FULL WIDTH VIDEO BANNER -->
+<section class="full-video-banner">
+    <iframe
+        src="https://player.vimeo.com/video/1133793461?autoplay=1&loop=1&muted=1&background=1#t=120s"
+        frameborder="0"
+        allow="autoplay; fullscreen">
+    </iframe>
+</section>
+
+<!-- BLOCK 7: IMAGE MONTAGE -->
+<section class="image-montage-section">
+    <div class="montage-grid">
+        <div class="montage-item">
+            <img src="https://monumental.global/wp-content/uploads/2025/11/MR-118-1-scaled-1.webp" alt="Monumental Spain Retreat">
+        </div>
+        <div class="montage-item">
+            <img src="https://monumental.global/wp-content/uploads/2025/11/MR-93-scaled-1.webp" alt="Monumental Spain Retreat">
+        </div>
+        <div class="montage-item">
+            <img src="https://monumental.global/wp-content/uploads/2025/11/MR-53-scaled-1.webp" alt="Monumental Spain Retreat">
+        </div>
+        <div class="montage-item">
+            <img src="https://monumental.global/wp-content/uploads/2025/11/MR-75-2-scaled-1.webp" alt="Monumental Spain Retreat">
+        </div>
+        <div class="montage-item">
+            <img src="https://monumental.global/wp-content/uploads/2025/11/MR-45-scaled-1.webp" alt="Monumental Spain Retreat">
+        </div>
+        <div class="montage-item">
+            <img src="https://monumental.global/wp-content/uploads/2025/11/MR-49-scaled-2.webp" alt="Monumental Spain Retreat">
+        </div>
+        <div class="montage-item">
+            <img src="https://monumental.global/wp-content/uploads/2025/11/MR-1-scaled-1.webp" alt="Monumental Spain Retreat">
+        </div>
+        <div class="montage-item">
+            <img src="https://monumental.global/wp-content/uploads/2025/11/joinusinspain_upscaled-1-scaled-1.webp" alt="Monumental Spain Retreat">
+        </div>
+        <div class="montage-item">
+            <img src="https://monumental.global/wp-content/uploads/2025/11/Pete-Hunt-Monumental-scaled-1.webp" alt="Monumental Spain Retreat">
+        </div>
+        <div class="montage-item">
+            <img src="https://monumental.global/wp-content/uploads/2025/11/Drone-3-side-1-4.webp" alt="Monumental Spain Retreat">
+        </div>
+    </div>
+</section>
+
+<!-- BLOCK 8: 9 FEATURES SECTION -->
+<section class="features-section">
+    <div class="features-bg"></div>
+    <div class="container">
+        <div class="features-header">
+            <h2 class="features-title">What Awaits You in <span>Spain</span></h2>
+            <p class="features-subtitle">
+                A meticulously crafted experience designed for profound transformation
+            </p>
+        </div>
+
+        <div class="features-grid">
+            <!-- Feature 1 -->
+            <div class="feature-card">
+                <div class="feature-video">
+                    <iframe
+                        src="https://player.vimeo.com/video/1133793461?autoplay=1&loop=1&muted=1&background=1#t=10s"
+                        frameborder="0"
+                        allow="autoplay; fullscreen">
+                    </iframe>
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">An Intimate, High-Touch Experience</h3>
+                    <p class="feature-description">
+                        This is Monumental at its finest. A carefully curated journey combining deep personal work, luxury accommodations, and transformative experiences designed to help you step into your fullest potential.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-card">
+                <div class="feature-video">
+                    <iframe
+                        src="https://player.vimeo.com/video/1133793461?autoplay=1&loop=1&muted=1&background=1#t=30s"
+                        frameborder="0"
+                        allow="autoplay; fullscreen">
+                    </iframe>
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Personalized Coaching & Breakthrough Work</h3>
+                    <p class="feature-description">
+                        Work directly with our experienced facilitators in an intimate group setting. The small group size ensures personalized attention focused on your unique journey and breakthroughs.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-card">
+                <div class="feature-video">
+                    <iframe
+                        src="https://player.vimeo.com/video/1133793461?autoplay=1&loop=1&muted=1&background=1#t=50s"
+                        frameborder="0"
+                        allow="autoplay; fullscreen">
+                    </iframe>
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Legacy & Purpose Work</h3>
+                    <p class="feature-description">
+                        Move beyond surface-level growth into your life's greatest work. Define the impact you want to make and the legacy you're here to build for generations to come.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="feature-card">
+                <div class="feature-video">
+                    <iframe
+                        src="https://player.vimeo.com/video/1133793461?autoplay=1&loop=1&muted=1&background=1#t=70s"
+                        frameborder="0"
+                        allow="autoplay; fullscreen">
+                    </iframe>
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Luxury Villa Accommodation</h3>
+                    <p class="feature-description">
+                        Immerse yourself in Spanish beauty with your own private room in a stunning villa. Daily housekeeping means zero distractions - you focus completely on your transformation.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="feature-card">
+                <div class="feature-video">
+                    <iframe
+                        src="https://player.vimeo.com/video/1133793461?autoplay=1&loop=1&muted=1&background=1#t=95s"
+                        frameborder="0"
+                        allow="autoplay; fullscreen">
+                    </iframe>
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Exceptional Cuisine & Brotherhood</h3>
+                    <p class="feature-description">
+                        Experience authentic Spanish cuisine prepared by talented local chefs, nourishing body and soul while you forge deep bonds of brotherhood with like-minded men.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="feature-card">
+                <div class="feature-video">
+                    <iframe
+                        src="https://player.vimeo.com/video/1133793461?autoplay=1&loop=1&muted=1&background=1#t=110s"
+                        frameborder="0"
+                        allow="autoplay; fullscreen">
+                    </iframe>
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Seamless Arrival Experience</h3>
+                    <p class="feature-description">
+                        Your journey begins the moment you land. Private airport transfers and a welcome experience ensure you arrive ready to fully engage with the transformative work ahead.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 7 -->
+            <div class="feature-card">
+                <div class="feature-video">
+                    <iframe
+                        src="https://player.vimeo.com/video/1133793461?autoplay=1&loop=1&muted=1&background=1#t=130s"
+                        frameborder="0"
+                        allow="autoplay; fullscreen">
+                    </iframe>
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Small, Committed Group</h3>
+                    <p class="feature-description">
+                        You'll be surrounded by a carefully selected group of men as committed to growth as you are, ensuring focused, meaningful work that reaches the deepest layers.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 8 -->
+            <div class="feature-card">
+                <div class="feature-video">
+                    <iframe
+                        src="https://player.vimeo.com/video/1133793461?autoplay=1&loop=1&muted=1&background=1#t=150s"
+                        frameborder="0"
+                        allow="autoplay; fullscreen">
+                    </iframe>
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Pre-Retreat Preparation</h3>
+                    <p class="feature-description">
+                        Before arriving in Spain, you'll receive guidance to set clear intentions and prepare mentally, emotionally, and spiritually to maximize your transformation.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 9 -->
+            <div class="feature-card">
+                <div class="feature-video">
+                    <iframe
+                        src="https://player.vimeo.com/video/1133793461?autoplay=1&loop=1&muted=1&background=1#t=170s"
+                        frameborder="0"
+                        allow="autoplay; fullscreen">
+                    </iframe>
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Post-Retreat Integration</h3>
+                    <p class="feature-description">
+                        The transformation doesn't end when you leave Spain. Receive ongoing integration support to ensure your breakthroughs translate into lasting change in your daily life.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BLOCK 9: FINAL CTA SECTION -->
+<section class="final-cta-section">
+    <div class="cta-pattern"></div>
+    <div class="container cta-content">
+        <span class="cta-badge">Limited Spaces • April 15-19, 2026</span>
+
+        <h2 class="cta-title">YOUR TRANSFORMATION AWAITS</h2>
+
+        <p class="cta-subtitle">
+            Take the first step toward becoming the man you're meant to be. Join us in Spain for an experience that will reshape your life, your leadership, and your legacy.
+        </p>
+
+        <div class="cta-buttons">
+            <a href="https://insight.monumental.global/spainretreat2026" class="cta-button">Secure Your Place Now</a>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Fade in hero video once it starts playing
+    document.addEventListener('DOMContentLoaded', function() {
+        const heroIframe = document.getElementById('heroVideo');
+
+        // Add loaded class after a short delay to ensure video has started
+        setTimeout(function() {
+            heroIframe.classList.add('loaded');
+        }, 1000);
+    });
+
+    // Add parallax effect to CTA pattern on scroll
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const pattern = document.querySelector('.cta-pattern');
+        if (pattern) {
+            pattern.style.transform = `translate(${scrolled * 0.1}px, ${scrolled * 0.1}px)`;
+        }
+    });
+
+    // Add ripple effect on button click
+    document.querySelectorAll('.cta-button, .hero-cta, .video-heading-cta').forEach(button => {
+        button.addEventListener('click', function(e) {
+            const ripple = document.createElement('span');
+            ripple.style.position = 'absolute';
+            ripple.style.borderRadius = '50%';
+            ripple.style.background = 'rgba(255,255,255,0.5)';
+            ripple.style.pointerEvents = 'none';
+            this.appendChild(ripple);
+
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            ripple.style.transform = 'scale(0)';
+            ripple.style.transition = 'transform 0.6s ease';
+
+            setTimeout(() => {
+                ripple.style.transform = 'scale(4)';
+                ripple.style.opacity = '0';
+            }, 10);
+
+            setTimeout(() => ripple.remove(), 600);
+        });
+    });
+</script>
+
+</body>
+</html>
