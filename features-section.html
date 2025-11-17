@@ -1,0 +1,293 @@
+<style>
+.features-section {
+    padding: 120px 0;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.features-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.features-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://monumental.global/wp-content/uploads/2025/11/DJI_0632.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.features-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.features-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.features-header {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.features-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 1.1;
+}
+
+.features-title span {
+    color: #daa520;
+}
+
+.features-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #ffffff;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.feature-card {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(218, 165, 32, 0.2);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 80px rgba(218, 165, 32, 0.3);
+    border-color: rgba(218, 165, 32, 0.5);
+}
+
+.feature-image {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+
+.feature-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover .feature-image img {
+    transform: scale(1.05);
+}
+
+.feature-content {
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.feature-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.5rem;
+    color: #daa520;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+.feature-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 992px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .features-section {
+        padding: 80px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<section class="features-section">
+    <div class="features-bg"></div>
+    <div class="features-container">
+        <div class="features-header">
+            <h2 class="features-title">What Awaits You in <span>Spain</span></h2>
+            <p class="features-subtitle">
+                A meticulously crafted experience designed for profound transformation
+            </p>
+        </div>
+
+        <div class="features-grid">
+            <!-- Feature 1 -->
+            <div class="feature-card">
+                <div class="feature-image">
+                    <img src="https://monumental.global/wp-content/uploads/2025/11/Pool-at-sunset-scaled.jpg" alt="An Intimate, High-Touch Experience" loading="lazy">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">An Intimate, High-Touch Experience</h3>
+                    <p class="feature-description">
+                        This is Monumental at its finest. A carefully curated journey combining deep personal work, luxury accommodations, and transformative experiences designed to help you step into your fullest potential.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-card">
+                <div class="feature-image">
+                    <img src="https://monumental.global/wp-content/uploads/2025/11/DJI_0637.jpg" alt="Personalized Coaching & Breakthrough Work" loading="lazy">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Personalized Coaching & Breakthrough Work</h3>
+                    <p class="feature-description">
+                        Work directly with our experienced facilitators in an intimate group setting. The small group size ensures personalized attention focused on your unique journey and breakthroughs.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-card">
+                <div class="feature-image">
+                    <img src="https://monumental.global/wp-content/uploads/2025/11/DJI_0632.jpg" alt="Legacy & Purpose Work" loading="lazy">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Legacy & Purpose Work</h3>
+                    <p class="feature-description">
+                        Move beyond surface-level growth into your life's greatest work. Define the impact you want to make and the legacy you're here to build for generations to come.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="feature-card">
+                <div class="feature-image">
+                    <img src="https://monumental.global/wp-content/uploads/2025/11/Drone-3-side-1-4.webp" alt="Luxury Villa Accommodation" loading="lazy">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Luxury Villa Accommodation</h3>
+                    <p class="feature-description">
+                        Immerse yourself in Spanish beauty with your own private room in a stunning villa. Daily housekeeping means zero distractions - you focus completely on your transformation.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="feature-card">
+                <div class="feature-image">
+                    <img src="https://monumental.global/wp-content/uploads/2025/11/placeholderheroimage.webp" alt="Exceptional Cuisine & Brotherhood" loading="lazy">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Exceptional Cuisine & Brotherhood</h3>
+                    <p class="feature-description">
+                        Experience authentic Spanish cuisine prepared by talented local chefs, nourishing body and soul while you forge deep bonds of brotherhood with like-minded men.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="feature-card">
+                <div class="feature-image">
+                    <img src="https://monumental.global/wp-content/uploads/2025/11/7L4A4059-scaled.jpeg" alt="Seamless Arrival Experience" loading="lazy">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Seamless Arrival Experience</h3>
+                    <p class="feature-description">
+                        Your journey begins the moment you land. Private airport transfers and a welcome experience ensure you arrive ready to fully engage with the transformative work ahead.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 7 -->
+            <div class="feature-card">
+                <div class="feature-image">
+                    <img src="https://monumental.global/wp-content/uploads/2025/11/Pool-at-sunset-scaled.jpg" alt="Small, Committed Group" loading="lazy">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Small, Committed Group</h3>
+                    <p class="feature-description">
+                        You'll be surrounded by a carefully selected group of men as committed to growth as you are, ensuring focused, meaningful work that reaches the deepest layers.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 8 -->
+            <div class="feature-card">
+                <div class="feature-image">
+                    <img src="https://monumental.global/wp-content/uploads/2025/11/DJI_0637.jpg" alt="Pre-Retreat Preparation" loading="lazy">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Pre-Retreat Preparation</h3>
+                    <p class="feature-description">
+                        Before arriving in Spain, you'll receive guidance to set clear intentions and prepare mentally, emotionally, and spiritually to maximize your transformation.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 9 -->
+            <div class="feature-card">
+                <div class="feature-image">
+                    <img src="https://monumental.global/wp-content/uploads/2025/11/DJI_0632.jpg" alt="Post-Retreat Integration" loading="lazy">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Post-Retreat Integration</h3>
+                    <p class="feature-description">
+                        The transformation doesn't end when you leave Spain. Receive ongoing integration support to ensure your breakthroughs translate into lasting change in your daily life.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
