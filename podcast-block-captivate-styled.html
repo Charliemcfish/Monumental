@@ -1,0 +1,694 @@
+<!-- CAPTIVATE PODCAST - MONUMENTAL BRANDED STYLING -->
+
+<style>
+/* ========================================
+   BASE STYLES & RESET
+======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Belgrano', serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ========================================
+   PODCAST SECTION CONTAINER
+======================================== */
+.monumental-podcast-section {
+    padding: 80px 20px;
+    background: #f8f8f8;
+    position: relative;
+}
+
+.monumental-podcast-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://monumental.global/wp-content/uploads/2025/11/DJI_0514-scaled-2.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.02;
+    z-index: 0;
+}
+
+.monumental-podcast-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.monumental-podcast-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.monumental-podcast-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    color: #1D1D1D;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 1.2;
+}
+
+.monumental-podcast-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #daa520;
+    margin: 20px auto 0;
+}
+
+.monumental-podcast-description {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 700px;
+    margin: 20px auto 0;
+    line-height: 1.8;
+}
+
+/* ========================================
+   CAPTIVATE WRAPPER & CONTAINER
+======================================== */
+.captivate-podcast-wrapper {
+    background: transparent;
+    padding: 0;
+}
+
+/* Grid layout for episodes */
+.cfm-episodes-container,
+.cfm-episodes-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+/* ========================================
+   INDIVIDUAL EPISODE CARDS
+======================================== */
+.cfm-episode-item,
+.cfm-episode,
+.captivate-episode {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 0;
+    margin: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cfm-episode-item:hover,
+.cfm-episode:hover,
+.captivate-episode:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(218, 165, 32, 0.2);
+    border-color: #daa520;
+}
+
+/* ========================================
+   EPISODE IMAGE/THUMBNAIL
+======================================== */
+.cfm-episode-image,
+.cfm-episode-thumbnail,
+.episode-image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0;
+    margin: 0;
+}
+
+.cfm-episode-image img,
+.cfm-episode-thumbnail img,
+.episode-image-container img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 0;
+    margin: 0;
+    transition: transform 0.6s ease;
+}
+
+.cfm-episode-item:hover .cfm-episode-image img,
+.cfm-episode-item:hover .cfm-episode-thumbnail img,
+.cfm-episode:hover img {
+    transform: scale(1.08);
+}
+
+/* Gold overlay on hover */
+.cfm-episode-image::after,
+.cfm-episode-thumbnail::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(218,165,32,0.1) 0%, rgba(218,165,32,0.3) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.cfm-episode-item:hover .cfm-episode-image::after,
+.cfm-episode-item:hover .cfm-episode-thumbnail::after {
+    opacity: 1;
+}
+
+/* ========================================
+   EPISODE CONTENT AREA
+======================================== */
+.cfm-episode-content-wrapper,
+.cfm-episode-details {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========================================
+   EPISODE NUMBER/BADGE
+======================================== */
+.cfm-episode-number,
+.cfm-episode-season,
+.episode-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #daa520 0%, #c49320 100%);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-family: 'Libre Baskerville', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(218, 165, 32, 0.3);
+}
+
+/* ========================================
+   EPISODE TITLES
+======================================== */
+.cfm-episode-title,
+.cfm-episode-item h2,
+.cfm-episode-item h3,
+.captivate-episode h2,
+.captivate-episode h3 {
+    font-family: 'Libre Baskerville', serif;
+    color: #1D1D1D;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    font-size: 1.6rem;
+    transition: color 0.3s ease;
+}
+
+.cfm-episode-item:hover h2,
+.cfm-episode-item:hover h3,
+.cfm-episode-item:hover .cfm-episode-title {
+    color: #daa520;
+}
+
+/* ========================================
+   EPISODE META (Date, Duration, etc)
+======================================== */
+.cfm-episode-meta,
+.episode-meta,
+.cfm-episode-date {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 15px;
+    font-family: 'Belgrano', serif;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.cfm-episode-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cfm-episode-meta span::before {
+    content: '•';
+    color: #daa520;
+    font-weight: bold;
+}
+
+.cfm-episode-meta span:first-child::before {
+    display: none;
+}
+
+/* ========================================
+   PODCAST PLAYER STYLING
+======================================== */
+.cfm-episode-player,
+.captivate-player,
+.episode-player-container {
+    margin: 20px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
+    border-radius: 12px;
+    border: 2px solid #e5e5e5;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cfm-episode-player::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #daa520 0%, #c49320 100%);
+}
+
+.cfm-episode-item:hover .cfm-episode-player,
+.cfm-episode:hover .captivate-player {
+    border-color: #daa520;
+    background: linear-gradient(135deg, #fcfcfc 0%, #f8f8f8 100%);
+}
+
+/* Style the actual player iframe */
+.cfm-episode-player iframe,
+.captivate-player iframe,
+.episode-player-container iframe {
+    border-radius: 8px;
+    max-width: 100%;
+    width: 100%;
+    min-height: 150px;
+    border: none;
+}
+
+/* ========================================
+   EPISODE EXCERPT/DESCRIPTION
+======================================== */
+.cfm-episode-excerpt,
+.cfm-episode-content,
+.cfm-episode-description,
+.episode-excerpt {
+    font-family: 'Belgrano', serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.cfm-episode-excerpt p,
+.cfm-episode-content p {
+    margin-bottom: 10px;
+}
+
+/* ========================================
+   EPISODE LINKS & BUTTONS
+======================================== */
+.cfm-episode-link,
+.cfm-episode-item a.button,
+.episode-link,
+a.listen-link {
+    display: inline-block;
+    padding: 14px 35px;
+    background: transparent;
+    color: #daa520;
+    text-decoration: none;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid #daa520;
+    border-radius: 30px;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    margin-top: auto;
+}
+
+.cfm-episode-link::before,
+.cfm-episode-item a.button::before,
+.episode-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #daa520 0%, #c49320 100%);
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.cfm-episode-link:hover,
+.cfm-episode-item a.button:hover,
+.episode-link:hover {
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(218, 165, 32, 0.4);
+}
+
+.cfm-episode-link:hover::before,
+.cfm-episode-item a.button:hover::before,
+.episode-link:hover::before {
+    left: 0;
+}
+
+/* ========================================
+   PAGINATION STYLING
+======================================== */
+.cfm-pagination,
+.captivate-pagination,
+.podcast-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+    padding: 30px 0;
+}
+
+.cfm-pagination a,
+.cfm-pagination span,
+.captivate-pagination a,
+.captivate-pagination span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 45px;
+    height: 45px;
+    padding: 0 18px;
+    background: #ffffff;
+    color: #1D1D1D;
+    border: 2px solid #e5e5e5;
+    border-radius: 8px;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.cfm-pagination a:hover,
+.captivate-pagination a:hover {
+    background: linear-gradient(135deg, #daa520 0%, #c49320 100%);
+    color: white;
+    border-color: #daa520;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(218, 165, 32, 0.3);
+}
+
+.cfm-pagination .current,
+.cfm-pagination span.current,
+.captivate-pagination .current {
+    background: linear-gradient(135deg, #daa520 0%, #c49320 100%);
+    color: white;
+    border-color: #daa520;
+    box-shadow: 0 4px 15px rgba(218, 165, 32, 0.3);
+}
+
+/* ========================================
+   LOADING STATE
+======================================== */
+.cfm-episodes-loading,
+.episodes-loading {
+    text-align: center;
+    padding: 60px 20px;
+    font-family: 'Libre Baskerville', serif;
+    color: #daa520;
+    font-size: 1.2rem;
+}
+
+/* ========================================
+   NO EPISODES STATE
+======================================== */
+.cfm-no-episodes,
+.no-episodes-message {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 12px;
+    border: 2px dashed #e5e5e5;
+}
+
+.cfm-no-episodes p,
+.no-episodes-message p {
+    font-family: 'Belgrano', serif;
+    color: #666;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* ========================================
+   ANIMATION ON SCROLL
+======================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cfm-episode-item {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.cfm-episode-item:nth-child(1) { animation-delay: 0.1s; }
+.cfm-episode-item:nth-child(2) { animation-delay: 0.2s; }
+.cfm-episode-item:nth-child(3) { animation-delay: 0.3s; }
+.cfm-episode-item:nth-child(4) { animation-delay: 0.4s; }
+.cfm-episode-item:nth-child(5) { animation-delay: 0.5s; }
+.cfm-episode-item:nth-child(6) { animation-delay: 0.6s; }
+.cfm-episode-item:nth-child(7) { animation-delay: 0.7s; }
+.cfm-episode-item:nth-child(8) { animation-delay: 0.8s; }
+.cfm-episode-item:nth-child(9) { animation-delay: 0.9s; }
+.cfm-episode-item:nth-child(10) { animation-delay: 1s; }
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+/* Large tablets and small desktops */
+@media (max-width: 1200px) {
+    .cfm-episodes-container,
+    .cfm-episodes-list {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 25px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .monumental-podcast-section {
+        padding: 50px 15px;
+    }
+
+    .cfm-episodes-container,
+    .cfm-episodes-list {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .cfm-episode-content-wrapper,
+    .cfm-episode-details {
+        padding: 25px;
+    }
+
+    .cfm-episode-title,
+    .cfm-episode-item h2,
+    .cfm-episode-item h3 {
+        font-size: 1.4rem;
+    }
+
+    .monumental-podcast-header {
+        margin-bottom: 40px;
+    }
+
+    .cfm-episode-image img,
+    .cfm-episode-thumbnail img {
+        height: 200px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .monumental-podcast-section {
+        padding: 40px 15px;
+    }
+
+    .cfm-episode-content-wrapper,
+    .cfm-episode-details {
+        padding: 20px;
+    }
+
+    .cfm-episode-title,
+    .cfm-episode-item h2 {
+        font-size: 1.2rem;
+    }
+
+    .cfm-episode-link,
+    .episode-link {
+        padding: 12px 28px;
+        font-size: 0.85rem;
+        width: 100%;
+    }
+
+    .cfm-episode-player,
+    .captivate-player {
+        padding: 15px;
+    }
+
+    .cfm-pagination a,
+    .cfm-pagination span {
+        min-width: 40px;
+        height: 40px;
+        padding: 0 14px;
+        font-size: 0.85rem;
+    }
+
+    .cfm-episode-image img,
+    .cfm-episode-thumbnail img {
+        height: 180px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 375px) {
+    .cfm-episode-meta {
+        font-size: 0.85rem;
+    }
+
+    .cfm-episode-excerpt,
+    .cfm-episode-content {
+        font-size: 0.95rem;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+.cfm-episode-link:focus,
+.cfm-pagination a:focus {
+    outline: 3px solid #daa520;
+    outline-offset: 3px;
+}
+
+/* Screen reader only text */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+}
+</style>
+
+<!-- Podcast Episodes Section -->
+<section class="monumental-podcast-section">
+    <div class="monumental-podcast-container">
+        <div class="monumental-podcast-header">
+            <h2 class="monumental-podcast-title">Latest Episodes</h2>
+            <p class="monumental-podcast-description">
+                Explore our collection of powerful conversations with leaders, entrepreneurs,
+                and visionaries who are redefining what it means to lead with authenticity.
+            </p>
+        </div>
+
+        <!-- Captivate Shortcode Container -->
+        <div class="captivate-podcast-wrapper">
+            <!-- WordPress Shortcode - Replace this comment with: -->
+            <!-- <?php echo do_shortcode('[cfm_captivate_episodes show_id="dffe337f-0541-41f3-972d-a64f2c3949cd" episode_id="7965,7966,7967,7969,7970,7971,7972,7973,7974,7975,7976" layout="list" title="show" se_num="default" title_tag="h2" image="above_title" image_size="large" content="excerpt" content_length="55" player="above_content" link="show" link_text="Listen to this episode" order="desc" exclude="no" items="10" pagination="numbers"]'); ?> -->
+
+            <!-- Or use the shortcode directly in WordPress: -->
+            [cfm_captivate_episodes show_id="dffe337f-0541-41f3-972d-a64f2c3949cd" episode_id="7965,7966,7967,7969,7970,7971,7972,7973,7974,7975,7976" layout="list" title="show" se_num="default" title_tag="h2" image="above_title" image_size="large" content="excerpt" content_length="55" player="above_content" link="show" link_text="Listen to this episode" order="desc" exclude="no" items="10" pagination="numbers"]
+        </div>
+
+    </div>
+</section>
+
+<script>
+// Enhanced scroll animations for podcast episodes
+(function() {
+    'use strict';
+
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -80px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Wait for DOM to be ready
+    function initObserver() {
+        const episodes = document.querySelectorAll('.cfm-episode-item, .cfm-episode, .captivate-episode');
+        episodes.forEach((episode, index) => {
+            episode.style.animationDelay = `${index * 0.1}s`;
+            observer.observe(episode);
+        });
+    }
+
+    // Initialize on DOM ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initObserver);
+    } else {
+        initObserver();
+    }
+
+    // Re-initialize if new episodes are loaded (for pagination/AJAX)
+    const checkForNewEpisodes = () => {
+        const newEpisodes = document.querySelectorAll('.cfm-episode-item:not(.is-observed)');
+        if (newEpisodes.length > 0) {
+            newEpisodes.forEach((episode, index) => {
+                episode.classList.add('is-observed');
+                episode.style.animationDelay = `${index * 0.1}s`;
+                observer.observe(episode);
+            });
+        }
+    };
+
+    // Check for new episodes periodically (useful for AJAX-loaded content)
+    setInterval(checkForNewEpisodes, 1000);
+
+})();
+</script>
