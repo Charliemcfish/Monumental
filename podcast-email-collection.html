@@ -1,0 +1,349 @@
+<!-- ============================================ -->
+<!-- PODCAST EMAIL COLLECTION SECTION           -->
+<!-- ============================================ -->
+<style>
+    .podcast-email-section {
+        position: relative;
+        background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+        padding: 80px 20px;
+        overflow: hidden;
+    }
+
+    .podcast-email-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #daa520, transparent);
+    }
+
+    .podcast-email-section::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #daa520, transparent);
+    }
+
+    .podcast-email-container {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .podcast-email-badge {
+        display: inline-block;
+        padding: 8px 25px;
+        background: rgba(218,165,32,0.1);
+        color: #daa520;
+        border-radius: 30px;
+        font-size: 0.75rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        border: 1px solid rgba(218,165,32,0.3);
+        font-family: 'Belgrano', serif;
+    }
+
+    .podcast-email-title {
+        font-family: 'Libre Baskerville', serif;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        color: white;
+        margin-bottom: 15px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        line-height: 1.2;
+    }
+
+    .podcast-email-subtitle {
+        font-family: 'Belgrano', serif;
+        font-size: 1.1rem;
+        color: rgba(255,255,255,0.7);
+        margin-bottom: 40px;
+        line-height: 1.6;
+    }
+
+    .podcast-email-form {
+        display: flex;
+        gap: 15px;
+        max-width: 600px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .podcast-email-input {
+        flex: 1;
+        min-width: 280px;
+        padding: 18px 25px;
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(218,165,32,0.3);
+        border-radius: 5px;
+        color: white;
+        font-size: 1rem;
+        font-family: 'Belgrano', serif;
+        transition: all 0.3s ease;
+    }
+
+    .podcast-email-input::placeholder {
+        color: rgba(255,255,255,0.4);
+    }
+
+    .podcast-email-input:focus {
+        outline: none;
+        background: rgba(255,255,255,0.08);
+        border-color: #daa520;
+        box-shadow: 0 0 0 3px rgba(218,165,32,0.1);
+    }
+
+    .podcast-email-button {
+        padding: 18px 40px;
+        background: linear-gradient(135deg, #daa520 0%, #b8860b 100%);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+        font-family: 'Belgrano', serif;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .podcast-email-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        transition: left 0.5s ease;
+    }
+
+    .podcast-email-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(218,165,32,0.3);
+    }
+
+    .podcast-email-button:hover::before {
+        left: 100%;
+    }
+
+    .podcast-email-button:active {
+        transform: translateY(0);
+    }
+
+    .podcast-email-privacy {
+        margin-top: 20px;
+        font-size: 0.85rem;
+        color: rgba(255,255,255,0.5);
+        font-family: 'Belgrano', serif;
+    }
+
+    .podcast-email-privacy a {
+        color: #daa520;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .podcast-email-privacy a:hover {
+        color: #e5b932;
+    }
+
+    /* Success Message */
+    .podcast-email-success {
+        display: none;
+        padding: 20px;
+        background: rgba(46, 204, 113, 0.1);
+        border: 1px solid rgba(46, 204, 113, 0.3);
+        border-radius: 5px;
+        color: #2ecc71;
+        font-family: 'Belgrano', serif;
+        margin-top: 20px;
+    }
+
+    .podcast-email-success.show {
+        display: block;
+        animation: fadeInUp 0.5s ease;
+    }
+
+    /* Error Message */
+    .podcast-email-error {
+        display: none;
+        padding: 20px;
+        background: rgba(231, 76, 60, 0.1);
+        border: 1px solid rgba(231, 76, 60, 0.3);
+        border-radius: 5px;
+        color: #e74c3c;
+        font-family: 'Belgrano', serif;
+        margin-top: 20px;
+    }
+
+    .podcast-email-error.show {
+        display: block;
+        animation: fadeInUp 0.5s ease;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+        .podcast-email-section {
+            padding: 60px 20px;
+        }
+
+        .podcast-email-form {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .podcast-email-input {
+            min-width: 100%;
+        }
+
+        .podcast-email-button {
+            width: 100%;
+        }
+    }
+</style>
+
+<section class="podcast-email-section">
+    <div class="podcast-email-container">
+        <span class="podcast-email-badge">Monumental Podcast</span>
+        <h2 class="podcast-email-title">Be the First to Know</h2>
+        <p class="podcast-email-subtitle">
+            Join our exclusive list to get early access to new episodes, behind-the-scenes content, and special announcements from the Monumental Podcast.
+        </p>
+
+        <!-- Active Campaign Form -->
+        <form class="podcast-email-form" id="podcastEmailForm" method="POST">
+            <input
+                type="email"
+                name="email"
+                class="podcast-email-input"
+                placeholder="Enter your email address"
+                required
+                id="podcastEmail"
+            >
+            <button type="submit" class="podcast-email-button">
+                <span>Subscribe</span>
+            </button>
+        </form>
+
+        <div class="podcast-email-success" id="successMessage">
+            <strong>Success!</strong> You've been added to our podcast list. Check your email for confirmation.
+        </div>
+
+        <div class="podcast-email-error" id="errorMessage">
+            <strong>Oops!</strong> Something went wrong. Please try again.
+        </div>
+
+        <p class="podcast-email-privacy">
+            We respect your privacy. Unsubscribe at any time. <a href="#">Privacy Policy</a>
+        </p>
+    </div>
+</section>
+
+<!-- Active Campaign Integration Script -->
+<script>
+(function() {
+    const form = document.getElementById('podcastEmailForm');
+    const emailInput = document.getElementById('podcastEmail');
+    const successMessage = document.getElementById('successMessage');
+    const errorMessage = document.getElementById('errorMessage');
+
+    // IMPORTANT: Replace these with your actual Active Campaign details
+    const ACTIVE_CAMPAIGN_CONFIG = {
+        accountUrl: 'YOUR_ACCOUNT_URL', // e.g., 'https://yourcompany.activehosted.com'
+        formId: 'YOUR_FORM_ID',         // Your Active Campaign form ID
+        listId: 'YOUR_LIST_ID',         // Your "Monumental Podcast" list ID
+        tag: 'Monumental Podcast Info'  // Tag to be applied
+    };
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // Hide previous messages
+        successMessage.classList.remove('show');
+        errorMessage.classList.remove('show');
+
+        const email = emailInput.value.trim();
+
+        if (!email) {
+            showError('Please enter a valid email address.');
+            return;
+        }
+
+        // Show loading state
+        const button = form.querySelector('.podcast-email-button');
+        const originalText = button.innerHTML;
+        button.innerHTML = '<span>Subscribing...</span>';
+        button.disabled = true;
+
+        try {
+            // METHOD 1: Using Active Campaign Form Embed (Recommended)
+            // This submits to your Active Campaign form directly
+            const formData = new FormData();
+            formData.append('email', email);
+            formData.append('u', ACTIVE_CAMPAIGN_CONFIG.formId);
+            formData.append('f', ACTIVE_CAMPAIGN_CONFIG.formId);
+            formData.append('s', '');
+            formData.append('c', '0');
+            formData.append('m', '0');
+            formData.append('act', 'sub');
+            formData.append('v', '2');
+            formData.append('or', window.location.href);
+
+            // Note: You'll need to configure this endpoint with your actual Active Campaign form URL
+            const response = await fetch(`${ACTIVE_CAMPAIGN_CONFIG.accountUrl}/proc.php`, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors' // Active Campaign forms use no-cors
+            });
+
+            // Since we're using no-cors, we assume success if no error is thrown
+            showSuccess();
+            emailInput.value = '';
+
+        } catch (error) {
+            console.error('Subscription error:', error);
+            showError('Unable to subscribe. Please try again later.');
+        } finally {
+            button.innerHTML = originalText;
+            button.disabled = false;
+        }
+    });
+
+    function showSuccess() {
+        successMessage.classList.add('show');
+        setTimeout(() => {
+            successMessage.classList.remove('show');
+        }, 5000);
+    }
+
+    function showError(message) {
+        errorMessage.innerHTML = `<strong>Oops!</strong> ${message}`;
+        errorMessage.classList.add('show');
+        setTimeout(() => {
+            errorMessage.classList.remove('show');
+        }, 5000);
+    }
+})();
+</script>

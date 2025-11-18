@@ -1,0 +1,211 @@
+<!-- ============================================ -->
+<!-- PODCAST EMAIL COLLECTION WITH ACTIVE CAMPAIGN -->
+<!-- Alternative Implementation Using AC Embed    -->
+<!-- ============================================ -->
+<style>
+    .podcast-email-section {
+        position: relative;
+        background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+        padding: 80px 20px;
+        overflow: hidden;
+    }
+
+    .podcast-email-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #daa520, transparent);
+    }
+
+    .podcast-email-section::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #daa520, transparent);
+    }
+
+    .podcast-email-container {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .podcast-email-badge {
+        display: inline-block;
+        padding: 8px 25px;
+        background: rgba(218,165,32,0.1);
+        color: #daa520;
+        border-radius: 30px;
+        font-size: 0.75rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        border: 1px solid rgba(218,165,32,0.3);
+        font-family: 'Belgrano', serif;
+    }
+
+    .podcast-email-title {
+        font-family: 'Libre Baskerville', serif;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        color: white;
+        margin-bottom: 15px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        line-height: 1.2;
+    }
+
+    .podcast-email-subtitle {
+        font-family: 'Belgrano', serif;
+        font-size: 1.1rem;
+        color: rgba(255,255,255,0.7);
+        margin-bottom: 40px;
+        line-height: 1.6;
+    }
+
+    /* Style Active Campaign Form */
+    ._form_wrapper {
+        max-width: 600px !important;
+        margin: 0 auto !important;
+        background: transparent !important;
+    }
+
+    ._form_wrapper ._form-content {
+        background: transparent !important;
+    }
+
+    ._form_wrapper input[type="text"],
+    ._form_wrapper input[type="email"] {
+        padding: 18px 25px !important;
+        background: rgba(255,255,255,0.05) !important;
+        border: 1px solid rgba(218,165,32,0.3) !important;
+        border-radius: 5px !important;
+        color: white !important;
+        font-size: 1rem !important;
+        font-family: 'Belgrano', serif !important;
+        transition: all 0.3s ease !important;
+        width: 100% !important;
+    }
+
+    ._form_wrapper input[type="text"]::placeholder,
+    ._form_wrapper input[type="email"]::placeholder {
+        color: rgba(255,255,255,0.4) !important;
+    }
+
+    ._form_wrapper input[type="text"]:focus,
+    ._form_wrapper input[type="email"]:focus {
+        outline: none !important;
+        background: rgba(255,255,255,0.08) !important;
+        border-color: #daa520 !important;
+        box-shadow: 0 0 0 3px rgba(218,165,32,0.1) !important;
+    }
+
+    ._form_wrapper button[type="submit"],
+    ._form_wrapper ._submit {
+        padding: 18px 40px !important;
+        background: linear-gradient(135deg, #daa520 0%, #b8860b 100%) !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 5px !important;
+        font-size: 1rem !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
+        cursor: pointer !important;
+        font-family: 'Belgrano', serif !important;
+        transition: all 0.3s ease !important;
+        width: auto !important;
+        margin: 10px auto !important;
+    }
+
+    ._form_wrapper button[type="submit"]:hover,
+    ._form_wrapper ._submit:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 10px 25px rgba(218,165,32,0.3) !important;
+    }
+
+    ._form_wrapper ._error-inner {
+        background: rgba(231, 76, 60, 0.1) !important;
+        border: 1px solid rgba(231, 76, 60, 0.3) !important;
+        color: #e74c3c !important;
+        font-family: 'Belgrano', serif !important;
+    }
+
+    ._form_wrapper ._form-thank-you {
+        background: rgba(46, 204, 113, 0.1) !important;
+        border: 1px solid rgba(46, 204, 113, 0.3) !important;
+        color: #2ecc71 !important;
+        font-family: 'Belgrano', serif !important;
+        padding: 20px !important;
+        border-radius: 5px !important;
+    }
+
+    .podcast-email-privacy {
+        margin-top: 20px;
+        font-size: 0.85rem;
+        color: rgba(255,255,255,0.5);
+        font-family: 'Belgrano', serif;
+    }
+
+    .podcast-email-privacy a {
+        color: #daa520;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .podcast-email-privacy a:hover {
+        color: #e5b932;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+        .podcast-email-section {
+            padding: 60px 20px;
+        }
+    }
+</style>
+
+<section class="podcast-email-section">
+    <div class="podcast-email-container">
+        <span class="podcast-email-badge">Monumental Podcast</span>
+        <h2 class="podcast-email-title">Be the First to Know</h2>
+        <p class="podcast-email-subtitle">
+            Join our exclusive list to get early access to new episodes, behind-the-scenes content, and special announcements from the Monumental Podcast.
+        </p>
+
+        <!-- REPLACE THIS SECTION WITH YOUR ACTIVE CAMPAIGN FORM EMBED CODE -->
+        <div class="_form_1"></div>
+
+        <!-- Active Campaign Script - REPLACE WITH YOUR ACTUAL EMBED SCRIPT -->
+        <script src="https://YOUR_ACCOUNT.activehosted.com/f/embed.php?id=YOUR_FORM_ID" type="text/javascript" charset="utf-8"></script>
+        <!-- END ACTIVE CAMPAIGN EMBED -->
+
+        <p class="podcast-email-privacy">
+            We respect your privacy. Unsubscribe at any time. <a href="#">Privacy Policy</a>
+        </p>
+    </div>
+</section>
+
+<!--
+INSTRUCTIONS FOR ACTIVE CAMPAIGN INTEGRATION:
+
+1. Log into your Active Campaign account
+2. Go to Forms > Create a Form (or use existing form)
+3. Configure your form:
+   - Add email field
+   - Add to list: "Monumental Podcast"
+   - Add tag: "Monumental Podcast Info"
+   - Set up confirmation message
+4. Get the embed code:
+   - Click "Embed" or "Share"
+   - Copy the embed code
+   - Replace the placeholder div and script above with your actual embed code
+5. The custom CSS will automatically style your Active Campaign form to match the site design
+
+Alternative: If using the API approach, see podcast-email-collection.html
+-->
