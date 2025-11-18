@@ -1,0 +1,156 @@
+<!-- PODCAST BLOCK 1: Hero Section -->
+
+<style>
+/* Podcast Hero Section Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.podcast-hero-section {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000 url('https://monumental.global/wp-content/uploads/2025/11/Pete-Mounmental-Podcast.webp') center center / cover no-repeat;
+}
+
+.podcast-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.75) 100%);
+    z-index: 1;
+}
+
+.podcast-hero-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    background-image:
+        repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(218,165,32,.1) 35px, rgba(218,165,32,.1) 70px),
+        repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(218,165,32,.05) 35px, rgba(218,165,32,.05) 70px);
+    z-index: 1;
+}
+
+.podcast-hero-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+    padding: 20px;
+    max-width: 900px;
+}
+
+.podcast-hero-icon {
+    width: 140px;
+    height: auto;
+    padding-bottom: 2rem;
+    animation: fadeInDown 1s ease;
+}
+
+.podcast-hero-subtitle {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.1rem;
+    color: #daa520;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    animation: fadeInUp 1s ease 0.2s both;
+    text-transform: uppercase;
+}
+
+.podcast-hero-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    animation: fadeInUp 1s ease 0.4s both;
+}
+
+.podcast-hero-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 35px;
+    opacity: 0.95;
+    animation: fadeInUp 1s ease 0.6s both;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .podcast-hero-section {
+        height: 60vh;
+        min-height: 450px;
+    }
+
+    .podcast-hero-icon {
+        width: 110px;
+    }
+
+    .podcast-hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .podcast-hero-title {
+        font-size: 2rem;
+    }
+
+    .podcast-hero-description {
+        font-size: 1rem;
+    }
+}
+</style>
+
+<!-- Preload hero image -->
+<link rel="preload" href="https://monumental.global/wp-content/uploads/2025/11/Pete-Mounmental-Podcast.webp" as="image">
+
+<!-- Podcast Hero Section -->
+<section class="podcast-hero-section">
+    <div class="podcast-hero-overlay"></div>
+    <div class="podcast-hero-pattern"></div>
+    <div class="podcast-hero-content">
+        <img src="https://monumental.global/wp-content/uploads/2024/02/Monumental-02.png" alt="Monumental" class="podcast-hero-icon">
+        <p class="podcast-hero-subtitle">The Monumental Podcast</p>
+        <h1 class="podcast-hero-title">Conversations That Transform</h1>
+        <p class="podcast-hero-description">
+            Deep conversations with leaders who've navigated the peaks and valleys of success.
+            Real stories, authentic insights, and the wisdom that shapes extraordinary lives.
+        </p>
+    </div>
+</section>
